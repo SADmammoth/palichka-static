@@ -171,7 +171,7 @@ nav li {
 }
 
 
-.messege-title {
+.message-title {
   grid-area: title;
   border-right: var(--divider);
   padding-right: 20px;
@@ -187,11 +187,11 @@ nav li {
   padding-bottom: 10px;
 }
 
-.messege-grid .button {
+.message-grid .button {
   grid-area: button;
 }
 
-.messege-grid .description {
+.message-grid .description {
   grid-area: desc;
   margin-right: 30px;
   max-width: 620px;
@@ -203,7 +203,7 @@ nav li {
   padding-bottom: 10px;
 }
 
-.messege-grid {
+.message-grid {
   display: grid;
   grid-template: 'title button'
                  'desc  .' / auto 1fr;
@@ -230,16 +230,16 @@ nav li {
                          'button';
   }
 
-  .messege-grid * {
+  .message-grid * {
     margin: 0;
   }
 
-  .messege-title {
+  .message-title {
     border-right: none;
     padding-left: 5px;
   }
 
-  .messege-grid {
+  .message-grid {
     display: grid;
     grid-template: 'title'
                    'desc'
