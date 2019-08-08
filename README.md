@@ -1,0 +1,1 @@
+# palichka-static
