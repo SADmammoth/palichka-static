@@ -5,18 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href='./assets/fonts/fontawesome/css/all.css'>
-  <link rel='stylesheet' href='./style.css'>
   <link rel='stylesheet' href='./normalize.css'>
+  <link rel='stylesheet' href='./style.css'>
   <title>Свая Палiчка</title>
 </head>
 
 <body>
   <header>
       <div class='container'>
+        <div class='horizontal-flex-block'>
       <a href='#'>  
         <div class='branding'>
           <img class='logo' width=80 height=80 src='./assets/images/cropped-logo.jpg'>
-          <h2 class='sitename'>Свая Палiчка</h2>
+          <h3 class='sitename'>Свая Палiчка</h3>
         </div>
       </a>
       <nav class='header-nav-container'>
@@ -29,28 +30,29 @@
       <nav class='social-nav-container'>
         <p class='hint'>Ищите нас в соцсетях:</p>
         <ul class='social-nav horizontal-flex-block'>
-          <li class='hflex-item'><a href="#"><i class="fab fa-vk"></i></a></li>
-          <li class='hflex-item'><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-          <li class='hflex-item'><a href='#'><i class="fab fa-instagram"></i></a></li>
-          <li class='hflex-item'><a href='#'><i class="fab fa-odnoklassniki"></i></a></li>
+          <li class='hflex-item'><a href="#" class='ltblue-hover'><i class="fab fa-vk"></i></a></li>
+          <li class='hflex-item'><a href="#" class='blue-hover'><i class="fab fa-facebook-square"></i></a></li>
+          <li class='hflex-item'><a href='#' class='pink-hover'><i class="fab fa-instagram"></i></a></li>
+          <li class='hflex-item'><a href='#' class='orange-hover'><i class="fab fa-odnoklassniki"></i></a></li>
         </ul>
       </nav>
     </div>
+    </div>
   </header>
   <main>
-    <section class='main-section'>
-      <div class='container'>
+    <section id='main-section'>
+      <div class='container' style='position: absolute; top: 25%;'>
       <h1>Свая Палiчка</h1>
       <p class='main-text'>Яркая площадка креативной Беларуси</p>
     </div>
       <div class='leftside-wide-btngroup'>
-        <a href='#' class='button'>Посмотреть обновления</a>
+        <a href='#news-section' class='button'>Посмотреть обновления</a>
       </div> 
     </section>
     <section class='desc-section'>
       <div class='background'>
           <div class='container'>
-      <p class='main-text'>
+      <p class='main-text hyphenated'>
         "Свая палiчка" предлагает покупателям большой выбор прекрасных изделий 
         ручной работы, созданных в различных техниках лучшими мастерами страны. 
         Мы организуем для мастеров-ремесленников торговые площадки, продвигает 
@@ -59,33 +61,30 @@
       </div>
     </div>
     <div class='container'>
-      <p class='additional-text'>
+      <p class='additional-text hyphenated'>
         «Свая палiчка» собирает счастливых, креативных, позитивных людей; творческих, 
         талантливых, «рукастых» мастеров; всех кто сохраняет и показывает зелёную планету; 
         тех кто развивается сам и помогает развиваться другим.
       </p>
     </div>
     </section>
-    <div class='container'>
-    <section class='articles-grid'>
+    <section id='masters-section' class='articles-grid'>
     
       <h2 class='title'>Лучшие мастера</h2>
-      <p class='description'>Без мастеров никогда не было бы нашей крамы: мы помогаем им найти ценителей их работ,
-         а они нас вдохновляют! Каждый раз, покупая изделие, вы голосуете за лучшего мастера 
-         нашей крамы. Познакомьтесь с текущими лидерами!</p>
-      <div class='articles vertical-flex-block'>
+      <p class='description hyphenated'>Без мастеров никогда не было бы нашей крамы: мы помогаем им найти ценителей их работ,
+         а они нас вдохновляют! Каждый раз, покупая изделие, вы голосуете за лучшего мастера нашей крамы. Познакомьтесь с 
+         текущими лидерами!</p>
+      <div class='articles background vertical-flex-block'>
         <article class='vflex-item masters-card card'></article>
         <article class='vflex-item masters-card card'></article>
       </div>
       <a href='#' class='button'>Посмотреть всех</a>
     </section>
-  </div>
-  <div class='container'>
-    <section class='articles-grid'>
+    <section id='feedback-section' class='articles-grid'>
       <h2  class='title'>Рекомендации и отзывы</h2>
-      <p class='description'>Главное для нас – чтобы и мастера, и покупатели остались довольны. Мы рады получать 
+      <p class='description hyphenated'>Главное для нас – чтобы и мастера, и покупатели остались довольны. Мы рады получать 
         положительные отзывы и готовы поделиться ими с Вами!</p>
-      <div class='articles vertical-flex-block'>
+      <div class='articles background vertical-flex-block'>
         <arcticle class='vflex-item review-card card'></arcticle>
         <arcticle class='vflex-item review-card card'></arcticle>
         <arcticle class='vflex-item review-card card'></arcticle>
@@ -93,18 +92,17 @@
       <a href='#' class='button'>Оставить отзыв</a>
     
     </section>
-  </div>
-    <section class='message-grid'>
+    <section id='messege-section' class='message-grid'>
       <h2 class='message-title'>Вы Мастер и хотите завести сваю "Палiчку"?
       <br/>
       <span class='subtitle'>Вы можете сделать это онлайн!</span></h2>
       <a href='#' class='button'>Обратная связь</a>
-      <p class='description'>Мы можем гарантировать вам полную поддержку и всестороннюю консультацию, поможем 
+      <p class='description hyphenated'>Мы можем гарантировать вам полную поддержку и всестороннюю консультацию, поможем 
         снискать армию поклонников и истинное уважение коллег. Присоединяйтесь к дружному 
         коллективу мастеров и покупателей!</p>
     </section>
    
-    <section class='news-section'>
+    <section id='news-section' class='news-section'>
         <div class='container'>
         <h2>Обновления</h2>
       </div>
@@ -158,10 +156,10 @@
     </nav>
     <nav class='social-nav-container'>
       <ul class='social-nav horizontal-flex-block'>
-        <li class='hflex-item'><a href="#"><i class="fab fa-vk"></i></a></lic>
-        <li class='hflex-item'><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-        <li class='hflex-item'><a href='#'><i class="fab fa-instagram"></i></a></li>
-        <li class='hflex-item'><a href='#'><i class="fab fa-odnoklassniki"></i></a></li>
+          <li class='hflex-item'><a href="#" class='ltblue-hover'><i class="fab fa-vk"></i></a></li>
+          <li class='hflex-item'><a href="#" class='blue-hover'><i class="fab fa-facebook-square"></i></a></li>
+          <li class='hflex-item'><a href='#' class='pink-hover'><i class="fab fa-instagram"></i></a></li>
+          <li class='hflex-item'><a href='#' class='orange-hover'><i class="fab fa-odnoklassniki"></i></a></li>
       </ul>
     </nav>
   </div>
@@ -169,5 +167,8 @@
       <p class='description'>&copy; 2019, ИП Вася</p>
     </div>
   </footer>
+  <script src='./hyphenate.js'  type='text/javascript'>
+    
+  </script>
 </body>
 </html>
