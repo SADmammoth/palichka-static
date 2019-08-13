@@ -153,6 +153,7 @@ i:not(:hover) {
 
 .copyrights {
   background: var(--background);
+  padding: 5px 10px;
 }
 
 .leftside-wide-btngroup {
