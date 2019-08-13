@@ -203,9 +203,10 @@ i:not(:hover) {
 
 .articles-grid {
   display: grid;
-  grid-template: 'title    title'
-                       'articles desc'
-                       'articles button' / auto 1fr;
+  grid-template: 'title     title'
+                  'articles desc'
+                  'articles button'
+                /  auto     1fr;
   justify-items: start;
   align-items: flex-start;
   margin-bottom: 60px;
@@ -229,6 +230,23 @@ i:not(:hover) {
 .masters-card {
   width: 100%;
   height: 150px;
+}
+
+.blog-card {
+  width: 100%;
+  min-height: 80px !important;
+  height: 100%;
+}
+
+.masterpiece-card {
+  width: 80px;
+  height: 80px;
+}
+
+
+.masters-card-min {
+  width: 80px;
+  height: 80px;
 }
 
 .review-card {
@@ -436,4 +454,63 @@ ul {
 .orange-hover:hover {
   transition: color 0.2s ease-in-out;
   color: #ff9100;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 117px;
+  grid-row-gap: 10px;
+  grid-column-gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.news-grid .big-topic {
+  grid-row: span 3;
+  width: 100%;
+  height: 100%;
+}
+
+.news-grid .big-topic .cards {
+  height: 90%;
+}
+
+.news-grid .link {
+  align-self: flex-end;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.news-grid .medium-topic {
+  grid-row: span 2;
+  width: 100%;
+  height: 100%;
+}
+
+.news-grid .medium-topic .cards {
+  height: 84%;
+}
+
+.news-grid .small-topic {
+  grid-row: span 1;
+  width: 100%;
+  height: 100%;
+}
+
+.news-grid .small-topic .cards {
+  height: 80px;
+}
+
+.news-grid h3 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.topic-card {
+  background: var(--light-background);
+  box-shadow: var(--shadow);
+  min-height: 50px;
+  min-width: 50px;
 }
