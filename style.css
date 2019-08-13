@@ -39,11 +39,13 @@ h1 {
 h2 {
   font-size: 1.8rem;
   color: var(--primary-text-color);
+  margin-bottom: 14px;
 }
 
 h3 {
   font-size: 1.5rem;
   color: var(--primary-text-color);
+  margin-bottom: 10px;
 }
 
 .main-text {
@@ -65,8 +67,9 @@ h3 {
   color: var(--common-text-color);
 }
 
-section:nth-child(n+2) {
-  margin-top: 20px;
+section {
+  margin-bottom: 20px;
+  min-height: 30vh;
 }
 
 a {
@@ -149,7 +152,7 @@ i:not(:hover) {
 }
 
 .copyrights {
-  background: var(--dark-background);
+  background: var(--background);
 }
 
 .leftside-wide-btngroup {
@@ -513,4 +516,41 @@ ul {
   box-shadow: var(--shadow);
   min-height: 50px;
   min-width: 50px;
+}
+
+
+footer {
+  background: var(--dark-background);
+}
+
+#news-section .background {
+  margin-bottom: 30px;
+}
+
+
+.footer-grid .branding{
+  grid-area: branding;
+  padding-right: 10px;
+  border-right: var(--divider);
+}
+
+.footer-grid .footer-nav-container {
+  grid-area: nav;
+  width: 100%;
+}
+
+.footer-grid .social-nav-container {
+  grid-area: social;
+  padding-right: 10px;
+  border-right: var(--divider);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template: 'branding . nav nav nav'
+                 'social . .   .   .' 
+                 / 282px 40% 1fr 1fr 1fr;
+  justify-items: flex-end;
+  align-items: center;
+  padding: 20px 0;
 }
