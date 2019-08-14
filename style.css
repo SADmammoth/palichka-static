@@ -57,13 +57,13 @@ ul {
   padding: 0;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {/*Elements with class .desktop not viewed on handheld devices*/
   .desktop {
     display: none;
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1000px) {/*Elements with class .handheld not viewed on desktop devices*/
   .handheld {
     display: none;
   }
@@ -76,7 +76,7 @@ html {
   font-family: var(--font);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {/*font-size decreasing on handheld devices*/
 html {
   font-size: 12px;
 }
@@ -126,7 +126,6 @@ h3 {
 
 section {
   margin-bottom: 20px;
-  min-height: 30vh;
 }
 
 a {
@@ -318,6 +317,17 @@ nav li {
   margin-top: 10px;
 }
 
+@media screen and (max-width: 1000px) {
+.sitename {
+  padding-top: 5px;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+}
+
 /*# HEADER */
 header {
   height: 50px;
@@ -427,6 +437,11 @@ header .container {
 }
 
 @media screen and (max-width: 1000px) {
+
+  header {
+    height: 45px;
+  }
+
   .header-nav-container {
     width: 100%;
     margin: 0;
@@ -440,9 +455,6 @@ header .container {
     width: 98%;
   }
 
-  header {
-    height: 45px;
-  }
 }
 
 /*# MAIN SECTION & DESC SECTION*/
@@ -735,33 +747,6 @@ footer .background {
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 900px) {
-  footer .background{
-   width: 100%;
-  }
-
-  footer .branding{
-    border: none;
-    width: 60%;
-    margin: 0 auto;
-  }
-
-  .sitename {
-    padding-top: 5px;
-  }
-
-  .logo {
-    height: 50px;
-    width: 50px;
-  }
-
-  footer .social-nav-container {
-    border: none;
-    margin: 0 auto;
-    float: none;
-  }
-}
-
 .footer-nav li {
   width: 100%;
   padding: 2% 0;
@@ -774,6 +759,25 @@ footer .background {
 .footer-nav li:hover {
   background: var(--light-background);
   transition: all 0.2s ease-in-out;
+}
+
+
+@media screen and (max-width: 900px) {
+  footer .background{
+   width: 100%;
+  }
+
+  footer .branding{
+    border: none;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  footer .social-nav-container {
+    border: none;
+    margin: 0 auto;
+    float: none;
+  }
 }
 
 .copyrights {
