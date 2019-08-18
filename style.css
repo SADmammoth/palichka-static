@@ -3,6 +3,7 @@
     # GENERIC STYLES
     # HEADER
     # MAIN SECTION & DESC SECTION
+    # MASTER PAGE
     # GRIDS
     # FOOTER
 
@@ -129,7 +130,11 @@ h3 {
 }
 
 section {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+section:first-child {
+  margin-top: 60px;
 }
 
 a {
@@ -196,12 +201,16 @@ nav li {
   margin-left: 0;
 }
 
+.action-box {
+  align-self: flex-end;
+}
+
 
 /* Buttons and links*/
 
 .button {
   padding: 10px;
-  font-size: 1.1;
+  font-size: 1.1rem;
   background: var(--buttons-color);
   border-radius: 5px;
   transition: background 0.3s ease-in-out;
@@ -325,6 +334,14 @@ nav li {
   margin-top: 10px;
 }
 
+.shelf {
+  margin-top: 30px; 
+  box-shadow: var(--shadow);
+   background: var(--dark-background); 
+   height: 25px;
+    width: 100%;
+}
+
 @media screen and (max-width: 1000px) {
   .sitename {
     padding-top: 5px;
@@ -343,6 +360,7 @@ header {
   background: var(--dark-background);
   box-shadow: var(--shadow);
   position: fixed;
+  top: 0;
   width: 100vw;
   z-index: 9999;
   padding-top: 10px;
@@ -466,7 +484,6 @@ header .container {
   background: var(--main-image);
   height: 400px;
   position: relative;
-  padding-top: 60px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -475,6 +492,44 @@ header .container {
   }
 }
 
+
+/*# MASTER PAGE*/
+
+/*Master section*/
+
+#master-section {
+  padding: 50px 0;
+}
+
+.masters-photo {
+  height: 350px; 
+  width: 350px; 
+  object-fit: cover; 
+  border: var(--divider);
+}
+
+#master-section .background{
+  margin-bottom: 20px; 
+  padding-left: 50px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#master-section .main-text{
+  margin-left: 80px;
+  text-indent: 0;
+}
+
+#palichka-section .title{
+  width: 100%; 
+  text-align: center;
+}
+
+#palichka-section .background {
+  width: 100%;
+   padding-bottom: 80px; 
+   margin-bottom: 20px;
+}
 
 /*# GRIDS*/
 
@@ -493,6 +548,11 @@ header .container {
 }
 
 .masterpiece-card {
+  width: 150px;
+  height: 150px;
+}
+
+.masterpiece-card-min {
   width: 80px;
   height: 80px;
 }

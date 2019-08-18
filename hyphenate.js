@@ -5,9 +5,9 @@ function hyphenate(text) {
     special = "[йъь'&-]",
     shy = "\xAD",
     regExps = [
-      new RegExp(`(${vowel})(${anyletter}${anyletter})`, "ig"),
-      new RegExp(`(${vowel})(${consonant}${vowel}${anyletter})`, "ig"),
-      new RegExp(`(${vowel}${consonant})(${vowel}${anyletter})`, "ig")
+      new RegExp(`(${anyletter}${vowel})(${anyletter}${anyletter})`, "ig"),
+      new RegExp(`(${anyletter}${vowel})(${consonant}${vowel}${anyletter})`, "ig"),
+      new RegExp(`(${anyletter}${vowel}${consonant})(${vowel}${anyletter})`, "ig")
     ];
 
   return function () {
