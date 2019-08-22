@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<div lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='./assets/fonts/fontawesome/css/all.css'>
+    <link rel='stylesheet' href='./normalize.css'>
+    <link rel='stylesheet' href='./style.css'>
+    <script>
+      function show_message(form, selector) {
+        form.querySelector(selector).style.display = 'block';
+        setTimeout((form, selector) => {
+          form.querySelector(selector).style.display = 'none';
+          form.submit();
+        }, 1000, form, selector);
+      }
+    </script>
+    <title>Свая Палiчка: Контакты</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.gif" type="image/gif">
+  </head>
+
+  <body>
+
+    <header>
+      <div class='container'>
+        <div class='horizontal-flex-block'>
+          <a class='branding' href='./index.html'>
+            <img class='logo' width=80 height=80 src='./assets/images/cropped-logo.jpg'>
+            <p class='h2 sitename'>Свая Палiчка</p>
+          </a>
+          <nav class='header-nav-container desktop'>
+            <ul class='header-nav horizontal-flex-block'>
+              <li class='nav-item hflex-item'><a href='#'>Каталог</a></li>
+              <li class='nav-item hflex-item'><a href='#'>Мастеру</a></li>
+              <li class='nav-item hflex-item'><a href='#'>Контакты</a></li>
+            </ul>
+          </nav>
+          <nav class='social-nav-container desktop'>
+            <p class='hint'>Ищите нас в соцсетях:</p>
+            <ul class='social-nav horizontal-flex-block'>
+              <li class='hflex-item'><a href="#" class='ltblue-hover'><i class="fab fa-vk"></i></a></li>
+              <li class='hflex-item'><a href="#" class='blue-hover'><i class="fab fa-facebook-square"></i></a></li>
+              <li class='hflex-item'><a href='#' class='pink-hover'><i class="fab fa-instagram"></i></a></li>
+              <li class='hflex-item'><a href='#' class='orange-hover'><i class="fab fa-odnoklassniki"></i></a></li>
+            </ul>
+          </nav>
+          <div class='dropdown handheld'>
+            <input class='burger-icon dropdown-trigger' type='checkbox'>
+            <div class='burger-menu-left dropdown-content'>
+              <nav class='header-nav-container'>
+                <ul class='header-nav vertical-flex-block'>
+                  <li class='nav-item vflex-item'><a href='#'>Мастеру</a></li>
+                  <li class='nav-item vflex-item'><a href='#'>Контакты</a></li>
+                  <li class='nav-item vflex-item'><a href='#'>Каталог</a></li>
+                  <nav class='social-nav-container'>
+                    <p class='hint desktop'>Ищите нас в соцсетях:</p>
+                    <ul class='social-nav horizontal-flex-block'>
+                      <li class='hflex-item'><a href="#" class='ltblue-hover'><i class="fab fa-vk"></i></a></li>
+                      <li class='hflex-item'><a href="#" class='blue-hover'><i class="fab fa-facebook-square"></i></a></li>
+                      <li class='hflex-item'><a href='#' class='pink-hover'><i class="fab fa-instagram"></i></a></li>
+                      <li class='hflex-item'><a href='#' class='orange-hover'><i class="fab fa-odnoklassniki"></i></a></li>
+                    </ul>
+                  </nav>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <main>
+      <div class='background wide-toleft' style='width: 24%; margin-top: 30px; margin-bottom: 20px;'>
+        <h1 class='h1-small'>Аренда &quot;Палiчкi&quot;</h1>
+      </div>
+      <div class='container'>
+        <section style='display: inline-block; width: 40%'>
+          <p class='main-text hyphenated'>Эта книга адресована всем, кто изучает русский язык. Но состоит она не из правил, упражнений и учебных текстов. Для этого созданы другие замечательные учебники.</p>
+          <ul style='list-style-type: none; border: var(--divider); padding: 10px;'>
+            <li>
+              <strong class="price">200 BYN/мес</strong>
+              <p class='description' style='margin-top: 5px;'>При заключении договора менее, чем на месяц</p>
+            </li>
+            <li>
+              <strong class="price">150 BYN/мес <em class='discount'>-25%</em></strong>
+              <p class='description' style='margin-top: 5px;'>При заключении договора на месяц и более</p>
+            </li>
+          </ul>
+          <div class='horizontal-flex-block' style='width: 88%;'>
+            <p class='description'>Для получения подробной информации, воспользуйтесь <strong>формой обратной связи</strng></p>
+            <a href='#feedback-email' class='pictogram'><i class='fas fa-chevron-right'></i></a>
+          </div>
+        </section>
+
+        <section style='float: right;'>
+          <form id='feedback-form' action='' onsubmit="show_message(this, '.submit_message'); return false;">
+            <fieldset class='form-head'>
+              <input id='feedback-email' class='form-input' type='email' name='email' value='' placeholder='Email *' required/>
+              <input id='feedback-subject' value='Аренда "Палiчкi"' class='form-input' maxlength='60' type='text' name='subject' value='' list='subjects' placeholder='Тема письма *' required/>
+              <datalist id='subjects'>
+                    <option value='Аренда "Палiчкi"' >
+                    <option value='Отзыв от мастера'>
+                    <option value='Отзыв от покупателя'>
+                    <option value='Замечания по работе сайта'>
+                    <option value='Справочная информация'>
+                </datalist>
+            </fieldset>
+            <fieldset class='form-body'>
+              <textarea id='feedback-body' class='form-input' maxlength='998' style='resize: none' placeholder='Текст письма *' required></textarea>
+            </fieldset>
+            <fieldset class='form-footer'>
+              <span class='submit_message'><i class="fas fa-check-circle"></i>Ваше сообщение успешно отправлено</span>
+              <button type='submit' target='submit_message' class='button'>Отправить</button>
+            </fieldset>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class='background'>
+        <a class='branding ' href='# '>
+          <img class='logo ' width=80 height=80 src='./assets/images/cropped-logo.jpg '>
+          <p class='h2 sitename '>Свая Палiчка</p>
+        </a>
+        <nav class='social-nav-container '>
+          <ul class='social-nav horizontal-flex-block '>
+            <li class='hflex-item '><a href="#" class='ltblue-hover '><i class="fab fa-vk"></i></a></li>
+            <li class='hflex-item '><a href="#" class='blue-hover '><i class="fab fa-facebook-square"></i></a></li>
+            <li class='hflex-item '><a href='# ' class='pink-hover '><i class="fab fa-instagram"></i></a></li>
+            <li class='hflex-item '><a href='# ' class='orange-hover '><i class="fab fa-odnoklassniki"></i></a></li>
+          </ul>
+        </nav>
+        <nav class='footer-nav-container desktop '>
+          <ul class='footer-nav horizontal-flex-block '>
+            <li class='nav-item hflex-item '><a href='# '>Каталог</a></li>
+            <li class='nav-item hflex-item '><a href='# '>Мастеру</a></li>
+            <li class='nav-item hflex-item '><a href='# '>Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class='copyrights '>
+        <p class='hint '>&copy; 2019, ИП Вася</p>
+      </div>
+    </footer>
+
+    <script src='./hyphenate.js ' type='text/javascript '>
+    </script>
+  </body>
+
+  </html>
