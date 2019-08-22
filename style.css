@@ -4,6 +4,7 @@
     # HEADER
     # MAIN SECTION & DESC SECTION
     # MASTER PAGE
+    # FORMS
     # GRIDS
     # FOOTER
 
@@ -122,7 +123,6 @@ body {
   font-size: 1.4rem;
   margin-top: 5px;
   padding: 0;
-  text-indent: 10px;
   text-align: justify;
   color: var(--common-text-color);
 }
@@ -162,7 +162,7 @@ a {
   color: var(--secondary-text-color);
 }
 
-i:not(:hover) {
+.pictogram:not(:hover) {
   color: var(--primary-text-color);
 }
 
@@ -231,7 +231,7 @@ i:not(:hover) {
 .background {
   float: left;
   background: var(--background);
-  padding: 20px 0;
+  padding: 10px 0;
   padding-right: 20px;
 }
 
@@ -527,6 +527,29 @@ input[type='radio']::before {
   margin-top: 20px;
 }
 
+.mapbox {
+  max-height: 400px;
+  max-width: 400px;
+  height: 100%;
+  width: 100%;
+}
+
+.submit_message {
+  position: absolute;
+  background: #75fa99;
+  width: 350px;
+  height: 40px; 
+  padding: 10px;
+  display: none;
+  box-sizing: border-box;
+  border-radius: 100px;
+  color: white !important;
+}
+
+.submit_message i {
+  padding-right: 10px;
+}
+
 @media screen and (max-width: 1000px) {
   .sitename {
     padding-top: 5px;
@@ -683,6 +706,56 @@ header .container {
   width: 100%;
   padding-bottom: 80px;
   margin-bottom: 20px;
+}
+
+
+/*# FORMS*/
+
+.form-input {
+  border: var(--divider);
+  border-radius: 2px;
+  background: var(--dark-background);
+  padding: 5px 10px;
+  display: block;
+  margin: 5px 0;
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--primary-text-color);
+  font-weight: 500;
+}
+
+input[type='text'], input[type='email'] {
+  height: 40px;
+}
+
+.form-input::placeholder {
+  color: var(--primary-text-color);
+  opacity: 0.5;
+  font-weight: 500;
+}
+
+fieldset {
+  width: 100%;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  border: none;
+}
+
+textarea {
+  height: 300px;
+}
+
+*[type='submit'] {
+  border: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  float: right;
+}
+
+#feedback-form {
+  width: 30%;
+  min-width: 500px;
 }
 
 
