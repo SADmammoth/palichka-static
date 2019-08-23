@@ -11,11 +11,11 @@ function hyphenate(text) {
       new RegExp(`(${vowel}${consonant})(${consonant}${vowel})`, "ig")
     ];
 
-  return function() {
+  return function () {
     for (var i = 1; i < regExps.length; ++i) {
       text = text.replace(regExps[i], "$1" + shy + "$2");
     }
-    return text
+    return text;
   }
 };
 

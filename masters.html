@@ -42,15 +42,15 @@
           <nav class='social-nav-container desktop'>
             <p class='hint'>Ищите нас в соцсетях:</p>
             <ul class='social-nav horizontal-flex-block'>
-              <li class='hflex-item'><a href="#" class='ltblue-hover'><i class="fab fa-vk"></i></a></li>
-              <li class='hflex-item'><a href="#" class='blue-hover'><i class="fab fa-facebook-square"></i></a></li>
-              <li class='hflex-item'><a href='#' class='pink-hover'><i class="fab fa-instagram"></i></a></li>
-              <li class='hflex-item'><a href='#' class='orange-hover'><i class="fab fa-odnoklassniki"></i></a></li>
+              <li class='hflex-item'><a href="#" class='ltblue-hover pictogram'><i class="fab fa-vk"></i></a></li>
+              <li class='hflex-item'><a href="#" class='blue-hover pictogram'><i class="fab fa-facebook-square"></i></a></li>
+              <li class='hflex-item'><a href='#' class='pink-hover pictogram'><i class="fab fa-instagram"></i></a></li>
+              <li class='hflex-item'><a href='#' class='orange-hover pictogram'><i class="fab fa-odnoklassniki"></i></a></li>
             </ul>
           </nav>
           <div class='dropdown handheld'>
             <input class='burger-icon dropdown-trigger' type='checkbox'>
-            <div class='burger-menu-left dropdown-content'>
+            <div class='burger-menu-bottom dropdown-content'>
               <nav class='header-nav-container'>
                 <ul class='header-nav vertical-flex-block'>
                   <li class='nav-item vflex-item'><a href='#'>Мастеру</a></li>
@@ -59,27 +59,28 @@
                   <nav class='social-nav-container'>
                     <p class='hint desktop'>Ищите нас в соцсетях:</p>
                     <ul class='social-nav horizontal-flex-block'>
-                      <li class='hflex-item'><a href="#" class='ltblue-hover'><i class="fab fa-vk"></i></a></li>
-                      <li class='hflex-item'><a href="#" class='blue-hover'><i class="fab fa-facebook-square"></i></a></li>
-                      <li class='hflex-item'><a href='#' class='pink-hover'><i class="fab fa-instagram"></i></a></li>
-                      <li class='hflex-item'><a href='#' class='orange-hover'><i class="fab fa-odnoklassniki"></i></a></li>
+                      <li class='hflex-item'><a href="#" class='ltblue-hover pictogram'><i class="fab fa-vk"></i></a></li>
+                      <li class='hflex-item'><a href="#" class='blue-hover pictogram'><i class="fab fa-facebook-square"></i></a></li>
+                      <li class='hflex-item'><a href='#' class='pink-hover pictogram'><i class="fab fa-instagram"></i></a></li>
+                      <li class='hflex-item'><a href='#' class='orange-hover pictogram'><i class="fab fa-odnoklassniki"></i></a></li>
                     </ul>
                   </nav>
                 </ul>
               </nav>
+              <a onclick='close_dropdown(this);' class='close-dropdown pictogram'><i class='fas fa-times'></i></a>
             </div>
           </div>
         </div>
     </header>
 
     <main style='position: relative;'>
-      <div class='background wide-toleft' style='margin-top: 30px;'>
-        <h1 class='h1-small'>Галерея мастеров</h1>
-      </div>
-      <section class='catalog cards vertical-flex-block'>
+      <h1 class='h1-small background wide-toleft'>Галерея мастеров</h1>
+
+
+      <section class='cards vertical-flex-block wide-toleft'>
         <article class='vflex-item masters-card card '>
           <div class='photo-box'>
-            <img class='photo ' width='150 ' height='150 ' src='./assets/images/kovrigo.png ' alt=' ' title=' '>
+            <img class='photo-thumb' width='150 ' height='150 ' src='./assets/images/kovrigo.png ' alt=' ' title=' '>
           </div>
           <h2 class='h2'>Сергей Ковриго</h2>
           <div class='works'>
@@ -94,7 +95,7 @@
         </article>
         <article class='vflex-item masters-card card '>
           <div class='photo-box'>
-            <img class='photo ' width='150 ' height='150 ' src='./assets/images/kovrigo.png ' alt=' ' title=' '>
+            <img class='photo-thumb' width='150 ' height='150 ' src='./assets/images/kovrigo.png ' alt=' ' title=' '>
           </div>
           <h2 class='h2'>Сергей Ковриго</h2>
           <div class='works'>
@@ -109,7 +110,7 @@
         </article>
         <article class='vflex-item masters-card card '>
           <div class='photo-box'>
-            <img class='photo ' width='150 ' height='150 ' src='./assets/images/kovrigo.png ' alt=' ' title=' '>
+            <img class='photo-thumb' width='150 ' height='150 ' src='./assets/images/kovrigo.png ' alt=' ' title=' '>
           </div>
           <h2 class='h2'>Сергей Ковриго</h2>
           <div class='works '>
@@ -123,61 +124,105 @@
           </div>
         </article>
       </section>
-      <aside class='sidebar background'>
+      <aside class='sidebar background insidelayout-fromright desktop'>
         <div class='options'>
-          <label for='search'><i class="fas fa-search pictogram"></i></label>
-          <input id='search' class='option-box' type='search' placeholder="Поиск" />
-        </div>
-        <div class='option-box dropdown'>
-          <label for='sort'><i class="fas fa-sort-amount-up pictogram"></i>Сортировка</label>
-          <input id='sort' class='common-dropdown dropdown-trigger' type='checkbox'>
-          <ul class='option-dropdown-content dropdown-content vertical-flex-block'>
-            <li class='vflex-item'>
-              <input onclick='setTimeout(close_dropdown, 300, this); ' id='sort_byname' name='sort' value='sort_byname' type='radio' checked>
-              <label for='sort_byname '>По имени</label>
-            </li>
-            <li class='vflex-item'>
-              <input onclick='setTimeout(close_dropdown, 300, this); ' id='sort_bytime' name='sort' value='sort_bytime' type='radio'>
-              <label for='sort_bytime '>По дате добавления</label>
-            </li>
-          </ul>
-        </div>
-        <div class='option-box dropdown'>
-          <label for='filter'><i class="fas fa-filter pictogram"></i>Фильтр</label>
-          <input id='filter' class='common-dropdown dropdown-trigger ' type='checkbox'>
-          <div class='option-dropdown-content dropdown-content vertical-flex-block'>
-            <li class='vflex-item'>
-              <input onclick='setTimeout(close_dropdown, 300, this); ' id='no_filter ' name='filter ' value='no_filter ' type='radio' checked>
-              <label for='no_filter '>Нет фильтра</label>
+          <div class='option'>
+            <label for='search'><i class="fas fa-search pictogram"></i></label>
+            <input id='search' class='option-box' type='search' placeholder="Поиск" />
+          </div>
+          <div class='option-box option dropdown'>
+            <label for='sort'><i class="fas fa-sort-amount-up pictogram"></i>Сортировка</label>
+            <input id='sort' class='common-dropdown dropdown-trigger pictogram' type='checkbox'>
+            <ul class='option-dropdown-content dropdown-content vertical-flex-block'>
+              <li class='vflex-item'>
+                <input onclick='setTimeout(close_dropdown, 300, this); ' id='sort_byname' name='sort' value='sort_byname' type='radio' checked>
+                <label for='sort_byname '>По имени</label>
+              </li>
+              <li class='vflex-item'>
+                <input onclick='setTimeout(close_dropdown, 300, this); ' id='sort_bytime' name='sort' value='sort_bytime' type='radio'>
+                <label for='sort_bytime '>По дате добавления</label>
+              </li>
+            </ul>
+          </div>
+          <div class='option-box option dropdown'>
+            <label for='filter'><i class="fas fa-filter pictogram"></i>Фильтр</label>
+            <input id='filter' class='common-dropdown dropdown-trigger pictogram' type='checkbox'>
+            <div class='option-dropdown-content dropdown-content vertical-flex-block'>
+              <li class='vflex-item'>
+                <input onclick='setTimeout(close_dropdown, 300, this); ' id='no_filter ' name='filter ' value='no_filter ' type='radio' checked>
+                <label for='no_filter '>Нет фильтра</label>
 
-            </li>
-            <li class='vflex-item'>
-              <input onclick='setTimeout(close_dropdown, 300, this); ' id='sort_byname ' name='filter ' value='filter_bybest' type='radio'>
-              <label for='filter_bybest '>Только лучшие</label>
-            </li>
+              </li>
+              <li class='vflex-item'>
+                <input onclick='setTimeout(close_dropdown, 300, this); ' id='sort_byname ' name='filter ' value='filter_bybest' type='radio'>
+                <label for='filter_bybest '>Только лучшие</label>
+              </li>
+            </div>
           </div>
         </div>
         </div>
       </aside>
 
-
+      <div class='dropdown floating-btn handheld dropdown-reverse'>
+          <input class='burger-icon dropdown-trigger' type='checkbox'>
+          <div class='burger-menu-left dropdown-content'>
+              <a onclick='close_dropdown(this);' class='close-dropdown pictogram'><i class='fas fa-times'></i></a>
+              <div class='options'>
+                  <div class='option'>
+                    <label for='search'><i class="fas fa-search pictogram"></i></label>
+                    <input id='search' class='option-box' type='search' placeholder="Поиск" />
+                  </div>
+                  <div class='option-box option dropdown'>
+                    <label for='sort'><i class="fas fa-sort-amount-up pictogram"></i>Сортировка</label>
+                    <input id='sort' class='common-dropdown dropdown-trigger pictogram' type='checkbox'>
+                    <ul class='option-dropdown-content dropdown-content vertical-flex-block'>
+                      <li class='vflex-item'>
+                        <input onclick='setTimeout(close_dropdown, 300, this); ' id='sort_byname' name='sort' value='sort_byname' type='radio' checked>
+                        <label for='sort_byname '>По имени</label>
+                      </li>
+                      <li class='vflex-item'>
+                        <input onclick='setTimeout(close_dropdown, 300, this); ' id='sort_bytime' name='sort' value='sort_bytime' type='radio'>
+                        <label for='sort_bytime '>По дате добавления</label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class='option-box option dropdown'>
+                    <label for='filter'><i class="fas fa-filter pictogram"></i>Фильтр</label>
+                    <input id='filter' class='common-dropdown dropdown-trigger pictogram' type='checkbox'>
+                    <div class='option-dropdown-content dropdown-content vertical-flex-block'>
+                      <li class='vflex-item'>
+                        <input onclick='setTimeout(close_dropdown, 300, this); ' id='no_filter ' name='filter ' value='no_filter ' type='radio' checked>
+                        <label for='no_filter '>Нет фильтра</label>
+        
+                      </li>
+                      <li class='vflex-item'>
+                        <input onclick='setTimeout(close_dropdown, 300, this); ' id='sort_byname ' name='filter ' value='filter_bybest' type='radio'>
+                        <label for='filter_bybest '>Только лучшие</label>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+                </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer>
-      <div class=' background '>
-        <a class='branding ' href='# '>
+      <div class='background wide-toleft'>
+        <a class='branding' href='# '>
           <img class='logo ' width=80 height=80 src='./assets/images/cropped-logo.jpg '>
           <p class='h2 sitename '>Свая Палiчка</p>
         </a>
         <nav class='social-nav-container '>
           <ul class='social-nav horizontal-flex-block '>
-            <li class='hflex-item '><a href="#" class='ltblue-hover '><i class="fab fa-vk"></i></a></li>
-            <li class='hflex-item '><a href="#" class='blue-hover '><i class="fab fa-facebook-square"></i></a></li>
-            <li class='hflex-item '><a href='# ' class='pink-hover '><i class="fab fa-instagram"></i></a></li>
-            <li class='hflex-item '><a href='# ' class='orange-hover '><i class="fab fa-odnoklassniki"></i></a></li>
+            <li class='hflex-item '><a href="#" class='ltblue-hover pictogram'><i class="fab fa-vk"></i></a></li>
+            <li class='hflex-item '><a href="#" class='blue-hover pictogram'><i class="fab fa-facebook-square"></i></a></li>
+            <li class='hflex-item '><a href='# ' class='pink-hover pictogram'><i class="fab fa-instagram"></i></a></li>
+            <li class='hflex-item '><a href='# ' class='orange-hover pictogram'><i class="fab fa-odnoklassniki"></i></a></li>
           </ul>
         </nav>
-        <nav class='footer-nav-container desktop '>
+        <nav class='footer-nav-container desktop insidelayout-fromright'>
           <ul class='footer-nav horizontal-flex-block '>
             <li class='nav-item hflex-item '><a href='# '>Каталог</a></li>
             <li class='nav-item hflex-item '><a href='# '>Мастеру</a></li>

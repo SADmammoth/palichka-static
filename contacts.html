@@ -7,10 +7,24 @@
     <link rel='stylesheet' href='./assets/fonts/fontawesome/css/all.css'>
     <link rel='stylesheet' href='./normalize.css'>
     <link rel='stylesheet' href='./style.css'>
-    <script>
-      function show_message(form, selector){
+    <script type='text/javascript'>
+    
+      function close_dropdown(el) {
+        let curr = el;
+
+        while (!curr.classList.contains('dropdown')) {
+          curr = curr.parentElement;
+        }
+        console.log(curr.querySelector('.dropdown-trigger'));
+        curr.querySelector('.dropdown-trigger').checked = false;
+      }
+
+      function show_message(form, selector) {
         form.querySelector(selector).style.display = 'block';
-        setTimeout((form, selector)=>{form.querySelector(selector).style.display = 'none'; form.submit();}, 1000, form, selector);
+        setTimeout((form, selector) => {
+          form.querySelector(selector).style.display = 'none';
+          form.submit();
+        }, 1000, form, selector);
       }
     </script>
     <title>Свая Палiчка: Контакты</title>
@@ -19,60 +33,59 @@
 
   <body>
 
-    <header>
-      <div class='container'>
-        <div class='horizontal-flex-block'>
-          <a class='branding' href='./index.html'>
-            <img class='logo' width=80 height=80 src='./assets/images/cropped-logo.jpg'>
-            <p class='h2 sitename'>Свая Палiчка</p>
-          </a>
-          <nav class='header-nav-container desktop'>
-            <ul class='header-nav horizontal-flex-block'>
-              <li class='nav-item hflex-item'><a href='#'>Каталог</a></li>
-              <li class='nav-item hflex-item'><a href='#'>Мастеру</a></li>
-              <li class='nav-item hflex-item'><a href='#'>Контакты</a></li>
-            </ul>
-          </nav>
-          <nav class='social-nav-container desktop'>
-            <p class='hint'>Ищите нас в соцсетях:</p>
-            <ul class='social-nav horizontal-flex-block'>
-              <li class='hflex-item'><a href="#" class='ltblue-hover'><i class="fab fa-vk"></i></a></li>
-              <li class='hflex-item'><a href="#" class='blue-hover'><i class="fab fa-facebook-square"></i></a></li>
-              <li class='hflex-item'><a href='#' class='pink-hover'><i class="fab fa-instagram"></i></a></li>
-              <li class='hflex-item'><a href='#' class='orange-hover'><i class="fab fa-odnoklassniki"></i></a></li>
-            </ul>
-          </nav>
-          <div class='dropdown handheld'>
-            <input class='burger-icon dropdown-trigger' type='checkbox'>
-            <div class='burger-menu-left dropdown-content'>
-              <nav class='header-nav-container'>
-                <ul class='header-nav vertical-flex-block'>
-                  <li class='nav-item vflex-item'><a href='#'>Мастеру</a></li>
-                  <li class='nav-item vflex-item'><a href='#'>Контакты</a></li>
-                  <li class='nav-item vflex-item'><a href='#'>Каталог</a></li>
-                  <nav class='social-nav-container'>
-                    <p class='hint desktop'>Ищите нас в соцсетях:</p>
-                    <ul class='social-nav horizontal-flex-block'>
-                      <li class='hflex-item'><a href="#" class='ltblue-hover'><i class="fab fa-vk"></i></a></li>
-                      <li class='hflex-item'><a href="#" class='blue-hover'><i class="fab fa-facebook-square"></i></a></li>
-                      <li class='hflex-item'><a href='#' class='pink-hover'><i class="fab fa-instagram"></i></a></li>
-                      <li class='hflex-item'><a href='#' class='orange-hover'><i class="fab fa-odnoklassniki"></i></a></li>
-                    </ul>
-                  </nav>
+      <header>
+          <div class='container'>
+            <div class='horizontal-flex-block'>
+              <a class='branding' href='./index.html'>
+                <img class='logo' width=80 height=80 src='./assets/images/cropped-logo.jpg'>
+                <p class='h2 sitename'>Свая Палiчка</p>
+              </a>
+              <nav class='header-nav-container desktop'>
+                <ul class='header-nav horizontal-flex-block'>
+                  <li class='nav-item hflex-item'><a href='#'>Каталог</a></li>
+                  <li class='nav-item hflex-item'><a href='#'>Мастеру</a></li>
+                  <li class='nav-item hflex-item'><a href='#'>Контакты</a></li>
                 </ul>
               </nav>
+              <nav class='social-nav-container desktop'>
+                <p class='hint'>Ищите нас в соцсетях:</p>
+                <ul class='social-nav horizontal-flex-block'>
+                  <li class='hflex-item'><a href="#" class='ltblue-hover pictogram'><i class="fab fa-vk"></i></a></li>
+                  <li class='hflex-item'><a href="#" class='blue-hover pictogram'><i class="fab fa-facebook-square"></i></a></li>
+                  <li class='hflex-item'><a href='#' class='pink-hover pictogram'><i class="fab fa-instagram"></i></a></li>
+                  <li class='hflex-item'><a href='#' class='orange-hover pictogram'><i class="fab fa-odnoklassniki"></i></a></li>
+                </ul>
+              </nav>
+              <div class='dropdown handheld'>
+                <input class='burger-icon dropdown-trigger' type='checkbox'>
+                <div class='burger-menu-bottom dropdown-content'>
+                  <nav class='header-nav-container'>
+                    <ul class='header-nav vertical-flex-block'>
+                      <li class='nav-item vflex-item'><a href='#'>Мастеру</a></li>
+                      <li class='nav-item vflex-item'><a href='#'>Контакты</a></li>
+                      <li class='nav-item vflex-item'><a href='#'>Каталог</a></li>
+                      <nav class='social-nav-container'>
+                        <p class='hint desktop'>Ищите нас в соцсетях:</p>
+                        <ul class='social-nav horizontal-flex-block'>
+                          <li class='hflex-item'><a href="#" class='ltblue-hover pictogram'><i class="fab fa-vk"></i></a></li>
+                          <li class='hflex-item'><a href="#" class='blue-hover pictogram'><i class="fab fa-facebook-square"></i></a></li>
+                          <li class='hflex-item'><a href='#' class='pink-hover pictogram'><i class="fab fa-instagram"></i></a></li>
+                          <li class='hflex-item'><a href='#' class='orange-hover pictogram'><i class="fab fa-odnoklassniki"></i></a></li>
+                        </ul>
+                      </nav>
+                    </ul>
+                  </nav>
+                  <a onclick='close_dropdown(this);' class='close-dropdown pictogram'><i class='fas fa-times'></i></a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-    </header>
+        </header>
 
     <main>
-      <div class='background wide-toleft' style='margin-top: 30px; margin-bottom: 20px;'>
-        <h1 class='h1-small'>Обратная связь</h1>
-      </div>
+      <h1 class='h1-small background wide-toleft'>Обратная связь</h1>
       <div class='container'>
         <section style='display: inline-block;'>
-          <form id='feedback-form' action='' onsubmit="show_message(this, '.submit_message'); return false;">
+          <form id='feedback-form' action='' method='POST' onsubmit="show_message(this, '.submit_message'); return false;">
             <fieldset class='form-head'>
               <input id='feedback-email' class='form-input' type='email' name='email' value='' placeholder='Email *' required/>
               <input id='feedback-subject' class='form-input' maxlength='60' type='text' name='subject' value='' list='subjects' placeholder='Тема письма *' required/>
@@ -89,23 +102,23 @@
             </fieldset>
             <fieldset class='form-footer'>
               <span class='submit_message'><i class="fas fa-check-circle"></i>Ваше сообщение успешно отправлено</span>
-              <button type='submit' target='submit_message'class='button'>Отправить</button>
+              <button type='submit' target='submit_message' class='button'>Отправить</button>
             </fieldset>
           </form>
         </section>
 
         <section style='float: right;'>
           <ul style='list-style-type: none;'>
-            <li>
+            <li style='margin-bottom: 5px;'>
               <a class='h3' href='tel:+375 29 111-11-11'><i class="fas fa-mobile-alt pictogram" style='margin-right: 5px;'></i>+375 29 111-11-11</a>
             </li>
-            <li style='margin-left: -5px;'>
+            <li style='margin-bottom: 5px; margin-left: -5px;'>
               <a class='h3' href='mailto:svaya.palichka@info.by'><i class="fas fa-at pictogram" style='margin-right: 5px;'></i>svaya.palichka@info.by</a>
             </li>
-            <li>
+            <li  style='margin-bottom: 5px;'>
               <a class='h3' href='https://yandex.by/maps/155/gomel/?ll=31.006746%2C52.428851&mode=usermaps&source=constructor&um=constructor%3A48aa09255f7b87136b085b14a724126378ab3965881b489652c6c51f68f6d150&z=19'>
                 <i class="fas fa-map-marker-alt pictogram" style='margin-right: 10px;'></i>г. Гомель, ул. Ирининская 7</a>
-              <div class='mapbox' style='border: var(--divider); margin-top: 20px; height: 350px; width: 380px; background: url("./assets/images/map_loading.jpg");background-position: cover; background-size: 100% 100%;'>
+              <div class='mapbox' style='background-image: url("./assets/images/map_loading.jpg");'>
                 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A48aa09255f7b87136b085b14a724126378ab3965881b489652c6c51f68f6d150&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
               </div>
             </li>
@@ -115,20 +128,20 @@
     </main>
 
     <footer>
-      <div class='background'>
-        <a class='branding ' href='# '>
+      <div class='background wide-toleft'>
+        <a class='branding' href='# '>
           <img class='logo ' width=80 height=80 src='./assets/images/cropped-logo.jpg '>
           <p class='h2 sitename '>Свая Палiчка</p>
         </a>
         <nav class='social-nav-container '>
           <ul class='social-nav horizontal-flex-block '>
-            <li class='hflex-item '><a href="#" class='ltblue-hover '><i class="fab fa-vk"></i></a></li>
-            <li class='hflex-item '><a href="#" class='blue-hover '><i class="fab fa-facebook-square"></i></a></li>
-            <li class='hflex-item '><a href='# ' class='pink-hover '><i class="fab fa-instagram"></i></a></li>
-            <li class='hflex-item '><a href='# ' class='orange-hover '><i class="fab fa-odnoklassniki"></i></a></li>
+            <li class='hflex-item '><a href="#" class='ltblue-hover pictogram'><i class="fab fa-vk"></i></a></li>
+            <li class='hflex-item '><a href="#" class='blue-hover pictogram'><i class="fab fa-facebook-square"></i></a></li>
+            <li class='hflex-item '><a href='# ' class='pink-hover pictogram'><i class="fab fa-instagram"></i></a></li>
+            <li class='hflex-item '><a href='# ' class='orange-hover pictogram'><i class="fab fa-odnoklassniki"></i></a></li>
           </ul>
         </nav>
-        <nav class='footer-nav-container desktop '>
+        <nav class='footer-nav-container desktop insidelayout-fromright'>
           <ul class='footer-nav horizontal-flex-block '>
             <li class='nav-item hflex-item '><a href='# '>Каталог</a></li>
             <li class='nav-item hflex-item '><a href='# '>Мастеру</a></li>
