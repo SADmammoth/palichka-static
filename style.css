@@ -432,26 +432,24 @@ strong {
 }
 
 .mapbox {
-  max-height: 400px;
-  max-width: 400px;
-  height: 100%;
-  width: 100%;
+  max-height: 350px;
+  max-width: 350px;
+  height: 91vw;
+  width: 91vw;
   border: var(--divider); 
-  margin-top: 20px; 
-  height: 350px;
-  width: 380px; 
+  margin-top: 20px;
   background-position: cover;
   background-size: 100% 100%;
 }
 
 .leftside-section {
   display: inline-block;
-  width: 40%;
+  width: 45%;
 }
 
 .rightside-section {
   float: right;
-  width: 50%;
+  width: 45%;
 }
 
 @media screen and (max-width: 1000px){
@@ -884,6 +882,29 @@ header .container {
   clear: none;
 }
 
+@media screen and (max-width: 1000px) {
+  #master-section>.container {
+    flex-wrap: wrap;
+  }
+  
+  .photo {
+    height: 150px;
+    width: 150px;
+    float: none;
+  }
+
+  #master-section .background {
+    margin-bottom: 20px;
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  #master-section .main-text {
+    margin-left: 0;
+  }
+}
+
 #palichka-section .title {
   text-align: center;
 }
@@ -891,7 +912,7 @@ header .container {
 #palichka-section .background {
   width: 100%;
   padding-top: 30px;
-  padding-bottom: 80px;
+  padding-bottom: 30px;
   margin-bottom: 20px;
   float: left;
   box-sizing: border-box;
@@ -913,6 +934,10 @@ header .container {
 #additional-master-gallery>* {
   transform: scale(1);
   transition: all 0.3s ease-in;
+}
+
+#additional-master-gallery.hidden {
+  height: 0px;
 }
 
 #additional-master-gallery.hidden>* {
@@ -952,6 +977,12 @@ header .container {
   .masterpiece-card-min {
     width: 50px;
     height: 50px;
+    background: var(--dark-background);
+  }
+
+  .masterpiece-card {
+    width: 80px;
+    height: 80px;
     background: var(--dark-background);
   }
 }
