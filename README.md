@@ -3,4 +3,4 @@
 Ready for CMS WordPress integration.
 Copy of website final version could be found by link https://github.com/SADmammoth/palichka
 
-&copy; Maxim "SADmammoth" Logvinenko
+&copy;,2019 Maxim "SADmammoth" Logvinenko
