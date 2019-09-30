@@ -10,6 +10,7 @@
 
     <title>Свая Палiчка: Мастера</title>
     <link rel="shortcut icon" href="./assets/images/favicon.gif" type="image/gif">
+    
     <script type='text/javascript'>
       function close_dropdown(el) {
         let curr = el;
@@ -34,9 +35,9 @@
           </a>
           <nav class='header-nav-container desktop'>
             <ul class='header-nav horizontal-flex-block'>
-              <li class='nav-item hflex-item'><a href='#'>Каталог</a></li>
-              <li class='nav-item hflex-item'><a href='#'>Мастеру</a></li>
-              <li class='nav-item hflex-item'><a href='#'>Контакты</a></li>
+              <li class='nav-item hflex-item'><a href='#'>Мастера</a></li>
+              <li class='nav-item hflex-item'><a href='./rentprices.html'>Аренда</a></li>
+              <li class='nav-item hflex-item'><a href='./contacts.html'>Контакты</a></li>
             </ul>
           </nav>
           <nav class='social-nav-container desktop'>
@@ -53,9 +54,9 @@
             <div class='burger-menu-bottom dropdown-content'>
               <nav class='header-nav-container'>
                 <ul class='header-nav vertical-flex-block'>
-                  <li class='nav-item vflex-item'><a href='#'>Мастеру</a></li>
-                  <li class='nav-item vflex-item'><a href='#'>Контакты</a></li>
-                  <li class='nav-item vflex-item'><a href='#'>Каталог</a></li>
+                  <li class='nav-item vflex-item'><a href='#'>Мастера</a></li>
+                  <li class='nav-item vflex-item'><a href='./rentprices.html'>Аренда</a></li>
+                  <li class='nav-item vflex-item'><a href='./contacts.html'>Контакты</a></li>
                   <nav class='social-nav-container'>
                     <p class='hint desktop'>Ищите нас в соцсетях:</p>
                     <ul class='social-nav horizontal-flex-block'>
@@ -74,11 +75,9 @@
     </header>
 
     <main style='position: relative;'>
-      <h1 class='h1-small background wide-toleft'>Галерея мастеров</h1>
-
-
+      <h1 class='h1-small background wide-toleft'  style='min-width: 63%; box-sizing: border-box;'>Галерея мастеров</h1>
       <section class='cards vertical-flex-block wide-toleft'>
-        <article class='vflex-item masters-card card '>
+        <article class='vflex-item masters-card card ' onclick='location.href="./master.html"' style='cursor: pointer;'>
           <div class='photo-box'>
             <img class='photo-thumb' width='150 ' height='150 ' src='./assets/images/kovrigo.png ' alt=' ' title=' '>
           </div>
@@ -93,7 +92,7 @@
             <div class='shelf-min '></div>
           </div>
         </article>
-        <article class='vflex-item masters-card card '>
+        <article class='vflex-item masters-card card ' onclick='location.href="./master.html"' style='cursor: pointer;'>
           <div class='photo-box'>
             <img class='photo-thumb' width='150 ' height='150 ' src='./assets/images/kovrigo.png ' alt=' ' title=' '>
           </div>
@@ -108,7 +107,7 @@
             <div class='shelf-min '></div>
           </div>
         </article>
-        <article class='vflex-item masters-card card '>
+        <article class='vflex-item masters-card card ' onclick='location.href="./master.html"' style='cursor: pointer;'>
           <div class='photo-box'>
             <img class='photo-thumb' width='150 ' height='150 ' src='./assets/images/kovrigo.png ' alt=' ' title=' '>
           </div>
@@ -209,31 +208,29 @@
     </main>
 
     <footer>
-      <div class='background wide-toleft'>
-        <a class='branding' href='# '>
-          <img class='logo ' width=80 height=80 src='./assets/images/cropped-logo.jpg '>
-          <p class='h2 sitename '>Свая Палiчка</p>
-        </a>
-        <nav class='social-nav-container '>
-          <ul class='social-nav horizontal-flex-block '>
-            <li class='hflex-item '><a href="#" class='ltblue-hover pictogram'><i class="fab fa-vk"></i></a></li>
-            <li class='hflex-item '><a href="#" class='blue-hover pictogram'><i class="fab fa-facebook-square"></i></a></li>
-            <li class='hflex-item '><a href='# ' class='pink-hover pictogram'><i class="fab fa-instagram"></i></a></li>
-            <li class='hflex-item '><a href='# ' class='orange-hover pictogram'><i class="fab fa-odnoklassniki"></i></a></li>
-          </ul>
-        </nav>
-        <nav class='footer-nav-container desktop insidelayout-fromright'>
-          <ul class='footer-nav horizontal-flex-block '>
-            <li class='nav-item hflex-item '><a href='# '>Каталог</a></li>
-            <li class='nav-item hflex-item '><a href='# '>Мастеру</a></li>
-            <li class='nav-item hflex-item '><a href='# '>Контакты</a></li>
-          </ul>
-        </nav>
+      <div class='branding insidelayout-fromleft'>
+        <a href='./'><img class='logo' width=80 height=80 src='./assets/images/cropped-logo.jpg '></a>
+        <a href='./'><p class='h2'>Свая Палiчка</p></a>
       </div>
-      <div class='copyrights '>
-        <p class='hint '>&copy; 2019, ИП Вася</p>
-      </div>
-    </footer>
+      <nav class='social-nav-container '>
+        <ul class='social-nav horizontal-flex-block insidelayout-fromleft'>
+          <li class='hflex-item '><a href="#" class='ltblue-hover pictogram'><i class="fab fa-vk"></i></a></li>
+          <li class='hflex-item '><a href="#" class='blue-hover pictogram'><i class="fab fa-facebook-square"></i></a></li>
+          <li class='hflex-item '><a href='# ' class='pink-hover pictogram'><i class="fab fa-instagram"></i></a></li>
+          <li class='hflex-item '><a href='# ' class='orange-hover pictogram'><i class="fab fa-odnoklassniki"></i></a></li>
+        </ul>
+      </nav>
+      <nav class='footer-nav-container desktop insidelayout-fromright'>
+        <ul class='footer-nav horizontal-flex-block'>
+          <li class='nav-item hflex-item '><a href='./'>Мастера</a></li>
+          <li class='nav-item hflex-item '><a href='./rentprices.html'>Аренда</a></li>
+          <li class='nav-item hflex-item '><a href='./contacts.html'>Контакты</a></li>
+        </ul>
+      </nav>
+    <div class='copyrights '>
+      <p class='hint '>&copy; 2019, ИП Вася</p>
+    </div>
+  </footer>
 
     <script src='./hyphenate.js ' type='text/javascript '>
     </script>
